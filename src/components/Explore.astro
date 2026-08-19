@@ -14,7 +14,9 @@ import MisureWord from "./ui/MisureWord.astro";
       >
         {explore.title}
       </h2>
-      <p class="mt-4 leading-relaxed text-green/80">{explore.description}</p>
+      <p class="mt-4 leading-relaxed text-green/80">
+        <MisureWord text={explore.description} />
+      </p>
     </div>
     <div class="mt-12 grid gap-6 md:grid-cols-3">
       {explore.items.map((item, index) => (

@@ -22,7 +22,9 @@ const year = new Date().getFullYear();
             class="h-10 w-auto"
           />
         </a>
-        <p class="mt-2 text-sm leading-relaxed text-green/70">{site.tagline}</p>
+        <p class="mt-2 text-sm leading-relaxed text-green/70">
+          <MisureWord text={site.tagline} />
+        </p>
       </div>
       <nav class="flex flex-col gap-2 text-sm" aria-label="Navegación">
         <p class="text-xs uppercase tracking-[0.2em] text-green/60">

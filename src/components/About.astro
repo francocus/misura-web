@@ -21,7 +21,7 @@ import MisureWord from "./ui/MisureWord.astro";
           style={{ transitionDelay: `${index * 80}ms` }}
           class="text-xl leading-relaxed text-green/80 md:text-2xl"
         >
-          {paragraph}
+          <MisureWord text={paragraph} />
         </p>
       ))}
     </div>

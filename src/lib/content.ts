@@ -143,6 +143,7 @@ export const about: {
   title: "Quiénes somos",
   body: [
     "Uno de nosotros empezó haciendo desarrollo freelance para pymes de Rosario a principios de 2025. Uno de esos trabajos fue un sistema para una empresa de limpieza: geolocalización para controlar asistencia, cálculo automático de sueldos e impuestos, stock por edificio. Cuando terminamos, habían eliminado un puesto administrativo completo.",
+    "El otro socio arrancó por su lado, desarrollando sistemas a medida para conocidos y amigos de familiares. Un ejemplo es el sistema de gestión jurídica que armamos a pedido de un estudio jurídico que opera en Argentina y Paraguay: gestión de clientes, expedientes judiciales y extrajudiciales, agenda, control financiero y una biblioteca jurídica con verificación de fuentes oficiales asistida por IA, todo adaptado a la normativa de ambos países.",
     "Ahí entendimos que había un problema real: las pymes locales pagan de más por sistemas genéricos que no encajan con cómo trabajan. Formamos misure para poder resolver eso a escala, con un modelo que va presencialmente a entender el negocio antes de escribir una línea de código.",
     "No somos una empresa con décadas de historia. Somos dos personas con un caso de éxito concreto y un método que funciona.",
   ],
@@ -358,6 +359,22 @@ export const portfolio: {
       href: "/proyectos/empresa-limpieza-rosario",
     },
     {
+      project: "Sistema de Gestión Jurídica Integral",
+      client: "Estudio jurídico — Argentina y Paraguay",
+      category: "erp",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "IA integrada",
+      ],
+      description:
+        "Plataforma integral para administrar un estudio jurídico que opera en dos jurisdicciones: gestión de clientes, expedientes judiciales y extrajudiciales, agenda, control financiero y una biblioteca jurídica con verificación de fuentes oficiales asistida por IA.",
+      href: "/proyectos/gestion-legal-estudio",
+    },
+    {
       project: "Proyecto [PENDIENTE]",
       client: "Cliente [PENDIENTE]",
       category: "crm",
@@ -464,8 +481,8 @@ export const contact: ContactInfo = {
     },
     {
       label: "Instagram",
-      url: "https://www.instagram.com/misure",
-      displayLabel: "@misure",
+      url: "https://www.instagram.com/misure.dev",
+      displayLabel: "@misure.dev",
     },
   ],
 };
@@ -518,9 +535,14 @@ export const contactForm = {
   formError: "Revisá los campos marcados e intentá de nuevo.",
   disclaimer:
     "Tus datos están seguros con nosotros. No compartimos tu información con terceros ni enviamos spam.",
+  modal: {
+    title: "¡Mensaje enviado!",
+    body: "Gracias por escribirnos. Te contactamos a la brevedad.",
+    closeLabel: "Cerrar",
+  },
   web3forms: {
     endpoint: "https://api.web3forms.com/submit",
-    accessKey: "[PENDIENTE: access key de Web3Forms]",
+    accessKey: "a6e71898-0129-4ef0-a454-619adaccd02f",
   },
 };
 
@@ -603,6 +625,79 @@ export const caseStudies = {
     },
     cta: {
       eyebrow: "¿Tu empresa tiene un problema similar?",
+      title: "Contanos cómo trabajás y te mostramos qué podemos hacer.",
+      label: "Quiero mi prototipo gratis",
+      href: "/contacto#contacto",
+    },
+  },
+  legal: {
+    slug: "gestion-legal-estudio",
+    seo: {
+      title: "Sistema de Gestión Jurídica Integral — misure",
+      description:
+        "Plataforma integral para administrar un estudio jurídico con jurisdicción en Argentina y Paraguay: clientes, expedientes judiciales y extrajudiciales, agenda, control financiero y biblioteca jurídica con verificación de fuentes oficiales asistida por IA.",
+    },
+    eyebrow: "Caso de estudio",
+    title: "Sistema de Gestión Jurídica Integral",
+    client: "Estudio jurídico con jurisdicción en Argentina y Paraguay",
+    location: "Argentina / Paraguay",
+    category: "Gestión (ERP)",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Google Gemini",
+    ],
+    problem: {
+      eyebrow: "El desafío",
+      title: "Un estudio que opera en dos jurisdicciones no puede depender de un software genérico",
+      body: [
+        "El estudio atiende causas en Argentina y Paraguay, dos jurisdicciones con normativa, procesos y organismos distintos. Un sistema estándar de gestión no contempla esa particularidad: la estructura de un expediente, las obligaciones fiscales o las fuentes normativas de cada país no se comportan igual.",
+        "El abogado necesitaba una sola plataforma que centralizara clientes, expedientes, agenda y finanzas del estudio, pero que al mismo tiempo se adaptara a la normativa y a los procesos de ambos países en lugar de forzarlos a un molde único.",
+        "El sistema se construyó en base a sus requisitos y pretensiones concretas: no se trata de un proyecto propio sin validación externa, sino de una herramienta pensada y ajustada para la operación real de un estudio que trabaja en dos mercados a la vez.",
+      ],
+    },
+    solution: {
+      eyebrow: "La solución",
+      title: "Un sistema construido alrededor de la operación real de un estudio jurídico",
+      features: [
+        {
+          title: "Gestión integral de clientes",
+          description:
+            "Ficha completa por cliente con datos personales, documento, contactos y el historial de causas asociadas. Todo el vínculo con cada cliente queda centralizado y consultable desde un solo lugar.",
+        },
+        {
+          title: "Expedientes judiciales y extrajudiciales",
+          description:
+            "Seguimiento de causas judiciales y extrajudiciales por cliente: carátula, juzgado, estado, movimientos, documentos adjuntos y notas. Cada expediente se modela según el proceso que realmente sigue el estudio.",
+        },
+        {
+          title: "Biblioteca jurídica con verificación de fuentes por IA",
+          description:
+            "El estudio guarda las normas que usa en su práctica, pero el sistema verifica automáticamente si la versión guardada sigue vigente contra la fuente oficial (Infoleg para Argentina, CSJ-IIJ para Paraguay) y, con asistencia de IA, alerta cuando una norma quedó desactualizada.",
+        },
+        {
+          title: "Agenda, control financiero y obligaciones",
+          description:
+            "Calendario de audiencias, vencimientos y citas; registro de honorarios, pagos y movimientos por causa; y control de obligaciones fiscales y contribuciones con seguimiento de su estado, adaptado a los organismos de cada país.",
+        },
+      ],
+    },
+    results: {
+      eyebrow: "Resultados",
+      title: "Las funcionalidades entregadas según las pretensiones del estudio.",
+      metrics: [
+        {
+          value: "[PENDIENTE]",
+          unit: "métricas de resultado si las hay",
+          label: "No contamos aún con cifras de ahorro o de tiempo. Completá con datos reales cuando los tengas.",
+        },
+      ],
+    },
+    cta: {
+      eyebrow: "¿Tu estudio opera en más de una jurisdicción?",
       title: "Contanos cómo trabajás y te mostramos qué podemos hacer.",
       label: "Quiero mi prototipo gratis",
       href: "/contacto#contacto",

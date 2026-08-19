@@ -10,7 +10,7 @@ const { text, word = "misure" } = Astro.props;
 {
   text.split(new RegExp(`(${word})`, "gi")).map((part) =>
     part.toLowerCase() === word.toLowerCase() ? (
-      <em class="normal-case italic">{word}</em>
+      <strong class="normal-case font-bold">{word}</strong>
     ) : (
       <span>{part}</span>
     )
